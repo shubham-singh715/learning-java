@@ -21,14 +21,31 @@ public class StackUsingLinkedList<E> {
 	}
 	
 	public void push(E i) {
-		Node<E> t1= new Node<>(i);
-	}
+		
+		Node<E> newNode= new Node<>(i);
+		newNode.next=head;
+		head=newNode;
+		size++;
 	
-	public E top() {
+	}
+	public E top() throws StackEmptyException {
+		if(head==null) {
+			throw new StackEmptyException();
+		}
+		return head.data;
 		
 	}
 	
-	public E pop() {
+	public E pop() throws StackEmptyException{
+
+			if(head==null) {
+				throw new StackEmptyException();
+			}
+		E temp=head.data ;
+		head=head.next;
+		
+		size--;
+		return temp;
 		
 	}
 
