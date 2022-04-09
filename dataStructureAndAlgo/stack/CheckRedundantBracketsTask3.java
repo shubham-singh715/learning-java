@@ -22,13 +22,15 @@ public class CheckRedundantBracketsTask3 {
 			}else {
 				int count=0;
 				while(stack.pop()!='(') {
-					stack.pop();
+			//		stack.pop();
 					count++;
 				}
-				if(count==0)
+				if(count==0 || count==1) {
+					return true;
+				}
 			}
 		}
-		return true;
+		return false;
 	}
 
 }
