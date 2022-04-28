@@ -12,6 +12,7 @@ public class CollectionLinkedList_10 {
 		list.add(20);
 		list.add(30);
 		list.add(50);
+	
 		
 		//Inserting
 		list.add(1,40);
