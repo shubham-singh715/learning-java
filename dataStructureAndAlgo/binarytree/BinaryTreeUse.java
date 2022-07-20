@@ -9,6 +9,8 @@ public class BinaryTreeUse {
 			return;
 		}
 		
+		//PreOrder Tree Traversal      root-left-right
+		
 		System.out.print(root.data+":");
 			if(root.left != null) {
 				System.out.print(" L" + root.left.data);
@@ -21,6 +23,36 @@ public class BinaryTreeUse {
 			printTree(root.left);		
 			printTree(root.right);
 		
+		// PostOrder Tree Traversal     left-right-root
+		
+/*		printTree(root.left);		
+		printTree(root.right);
+		
+		System.out.print(root.data+":");
+		if(root.left != null) {
+			System.out.print(" L" + root.left.data);
+		}
+		if(root.right != null) {
+			System.out.print(" R" + root.right.data);
+		}
+		System.out.println();
+*/	
+		
+		// InOrder Tree Traversal     left-root-right 
+		
+/*		printTree(root.left);		
+
+		System.out.print(root.data+":");
+		if(root.left != null) {
+			System.out.print(" L" + root.left.data);
+		}
+		if(root.right != null) {
+			System.out.print(" R" + root.right.data);
+		}
+		System.out.println();
+	
+		printTree(root.right);
+*/				
 	}
 	
 	public static void main(String[] args) {
@@ -33,11 +65,11 @@ public class BinaryTreeUse {
 		root.left=leftNode;
 		root.right=rightNode;
 		
-		BinaryTree<Integer> rightOf2 = new BinaryTree<>(4);
-		BinaryTree<Integer> leftOf3 = new BinaryTree<>(5);
-		
-		leftNode.right=rightOf2;
-		rightNode.left=leftOf3;
+//		BinaryTree<Integer> rightOf2 = new BinaryTree<>(4);
+//		BinaryTree<Integer> leftOf3 = new BinaryTree<>(5);
+//		
+//		leftNode.right=rightOf2;
+//		rightNode.left=leftOf3;
 		
 		printTree(root);
 		
